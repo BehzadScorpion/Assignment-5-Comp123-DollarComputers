@@ -1,13 +1,21 @@
-﻿using System;
+﻿using DollarComputers.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Lab11
+
+namespace DollarComputers
 {
-    static class Program
+    public static class Program
     {
+        public static StartForm startform;
+        public static SplashForm splashform;
+        public static SelectForm selectform;
+        public static ProductInfoForm productinfoForm;
+        public static OrderForm orderform;
+        public static AboutBox aboutform;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +24,18 @@ namespace Lab11
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            
+           splashform = new SplashForm();
+             startform = new StartForm();           
+            selectform = new SelectForm();
+            orderform = new OrderForm();
+            productinfoForm = new ProductInfoForm();
+            aboutform = new AboutBox();
+
+           
+
+
+            Application.Run(splashform);
         }
     }
 }
