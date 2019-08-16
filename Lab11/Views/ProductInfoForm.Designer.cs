@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductInfoForm));
-            this.OpenFileDialogue = new System.Windows.Forms.OpenFileDialog();
-            this.BackButton = new System.Windows.Forms.Button();
+            this.OpenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.SelectADifferentProductButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.ProductInfoMenuStrip = new System.Windows.Forms.MenuStrip();
@@ -85,25 +85,27 @@
             this.WebcamDataLabel = new System.Windows.Forms.Label();
             this.SaveProductButton = new System.Windows.Forms.Button();
             this.SaveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.selectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ProductInfoMenuStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // OpenFileDialogue
+            // OpenFileDialog
             // 
-            this.OpenFileDialogue.FileName = "openFileDialog1";
+            this.OpenFileDialog.FileName = "openFileDialog1";
             // 
-            // BackButton
+            // SelectADifferentProductButton
             // 
-            this.BackButton.AutoSize = true;
-            this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackButton.Location = new System.Drawing.Point(12, 508);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(115, 41);
-            this.BackButton.TabIndex = 0;
-            this.BackButton.Text = "Back";
-            this.BackButton.UseVisualStyleBackColor = true;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            this.SelectADifferentProductButton.AutoSize = true;
+            this.SelectADifferentProductButton.BackColor = System.Drawing.Color.DarkGray;
+            this.SelectADifferentProductButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectADifferentProductButton.Location = new System.Drawing.Point(12, 508);
+            this.SelectADifferentProductButton.Name = "SelectADifferentProductButton";
+            this.SelectADifferentProductButton.Size = new System.Drawing.Size(280, 41);
+            this.SelectADifferentProductButton.TabIndex = 0;
+            this.SelectADifferentProductButton.Text = "Select a Different Product";
+            this.SelectADifferentProductButton.UseVisualStyleBackColor = false;
+            this.SelectADifferentProductButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // NextButton
             // 
@@ -115,6 +117,7 @@
             this.NextButton.TabIndex = 6;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // CancelButton
             // 
@@ -145,6 +148,7 @@
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem,
             this.toolStripSeparator2,
+            this.selectToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -156,7 +160,7 @@
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.openToolStripMenuItem.Text = "&Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
@@ -166,20 +170,21 @@
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveProductButton_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(204, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -830,13 +835,19 @@
             this.SaveProductButton.AutoSize = true;
             this.SaveProductButton.BackColor = System.Drawing.Color.SkyBlue;
             this.SaveProductButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveProductButton.Location = new System.Drawing.Point(251, 508);
+            this.SaveProductButton.Location = new System.Drawing.Point(317, 508);
             this.SaveProductButton.Name = "SaveProductButton";
             this.SaveProductButton.Size = new System.Drawing.Size(187, 41);
             this.SaveProductButton.TabIndex = 10;
             this.SaveProductButton.Text = "Save Product";
             this.SaveProductButton.UseVisualStyleBackColor = false;
             this.SaveProductButton.Click += new System.EventHandler(this.SaveProductButton_Click);
+            // 
+            // selectToolStripMenuItem
+            // 
+            this.selectToolStripMenuItem.Name = "selectToolStripMenuItem";
+            this.selectToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.selectToolStripMenuItem.Text = "Select a different product";
             // 
             // ProductInfoForm
             // 
@@ -849,7 +860,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.NextButton);
-            this.Controls.Add(this.BackButton);
+            this.Controls.Add(this.SelectADifferentProductButton);
             this.Controls.Add(this.ProductInfoMenuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.ProductInfoMenuStrip;
@@ -869,8 +880,8 @@
 
         #endregion
 
-        private System.Windows.Forms.OpenFileDialog OpenFileDialogue;
-        private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.OpenFileDialog OpenFileDialog;
+        private System.Windows.Forms.Button SelectADifferentProductButton;
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.MenuStrip ProductInfoMenuStrip;
@@ -925,5 +936,6 @@
         private System.Windows.Forms.Label WebcamDataLabel;
         private System.Windows.Forms.Button SaveProductButton;
         private System.Windows.Forms.SaveFileDialog SaveFileDialog;
+        private System.Windows.Forms.ToolStripMenuItem selectToolStripMenuItem;
     }
 }

@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * 
+ * Last Modified: 8/16/2019-7:20PM
+*/
 namespace DollarComputers.Views
 {
     public partial class StartForm : Form

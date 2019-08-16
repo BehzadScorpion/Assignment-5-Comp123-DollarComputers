@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\LoadAndSaveMethods.cs" />
     <Compile Include="Controller\ProductInfo.cs" />
     <Compile Include="Models\DollarComputersContext.cs" />
     <Compile Include="Models\Product.cs" />
