@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 /*
  * 
- * Last Modified: 8/16/2019-4:00AM
+ * Last Modified: 8/16/2019-6:00PM
 */
 namespace DollarComputers.Views
 {
@@ -113,21 +113,36 @@ namespace DollarComputers.Views
         /// </summary>
         private void StoreTemporarily()
         {
+            Program.productInfo.productID = CurrentRow.Cells[0].Value.ToString();
             Program.productInfo.Cost = Convert.ToDouble(CurrentRow.Cells[1].Value);
             Program.productInfo.Manufacturer = CurrentRow.Cells[2].Value.ToString();
             Program.productInfo.Model = CurrentRow.Cells[3].Value.ToString();
-            Program.productInfo.productID= CurrentRow.Cells[0].Value.ToString();
+            Program.productInfo.RAM_type = CurrentRow.Cells[4].Value.ToString();
+            Program.productInfo.RAM_size = CurrentRow.Cells[5].Value.ToString();
+            Program.productInfo.displaytype = CurrentRow.Cells[6].Value.ToString();
             Program.productInfo.screensize= CurrentRow.Cells[7].Value.ToString();
+            Program.productInfo.resolution = CurrentRow.Cells[8].Value.ToString();
+            Program.productInfo.CPU_Class = CurrentRow.Cells[9].Value.ToString();
+            Program.productInfo.CPU_brand = CurrentRow.Cells[10].Value.ToString();
+            Program.productInfo.CPU_type = CurrentRow.Cells[11].Value.ToString();
+            Program.productInfo.CPU_speed = CurrentRow.Cells[12].Value.ToString();
+            Program.productInfo.CPU_number = CurrentRow.Cells[13].Value.ToString();
+            Program.productInfo.condition = CurrentRow.Cells[14].Value.ToString();
+            Program.productInfo.OS = CurrentRow.Cells[15].Value.ToString();
             Program.productInfo.platform= CurrentRow.Cells[16].Value.ToString();
-            Program.productInfo.condition= CurrentRow.Cells[14].Value.ToString();
-            Program.productInfo.OS= CurrentRow.Cells[15].Value.ToString();
-            Program.productInfo.RAM_size= CurrentRow.Cells[5].Value.ToString();
-            Program.productInfo.CPU_brand= CurrentRow.Cells[10].Value.ToString();
-            Program.productInfo.CPU_type= CurrentRow.Cells[11].Value.ToString();
-            Program.productInfo.CPU_number= CurrentRow.Cells[13].Value.ToString();
-            Program.productInfo.CPU_speed= CurrentRow.Cells[12].Value.ToString();
             Program.productInfo.HDD_size= CurrentRow.Cells[17].Value.ToString();
+            Program.productInfo.HDD_speed = CurrentRow.Cells[18].Value.ToString();
             Program.productInfo.GPU_Type= CurrentRow.Cells[19].Value.ToString();
+            Program.productInfo.optical_drive = CurrentRow.Cells[20].Value.ToString();
+            Program.productInfo.Audio_type = CurrentRow.Cells[21].Value.ToString();
+            Program.productInfo.LAN = CurrentRow.Cells[22].Value.ToString();
+            Program.productInfo.WIFI = CurrentRow.Cells[23].Value.ToString();
+            Program.productInfo.width = CurrentRow.Cells[24].Value.ToString();
+            Program.productInfo.height = CurrentRow.Cells[25].Value.ToString();
+            Program.productInfo.depth = CurrentRow.Cells[26].Value.ToString();
+            Program.productInfo.weight = CurrentRow.Cells[27].Value.ToString();
+            Program.productInfo.moust_type = CurrentRow.Cells[28].Value.ToString();
+            Program.productInfo.power = CurrentRow.Cells[29].Value.ToString();
             Program.productInfo.webcam= CurrentRow.Cells[30].Value.ToString();
         }
         

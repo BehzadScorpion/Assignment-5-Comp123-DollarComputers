@@ -33,11 +33,10 @@ namespace DollarComputers
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-           splashform = new SplashForm();
-             startform = new StartForm();           
+            splashform = new SplashForm();
+            startform = new StartForm();           
             selectform = new SelectForm();
             orderform = new OrderForm();
-            //productinfoForm = new ProductInfoForm();
             aboutform = new AboutBox();
 
             product = new Product();
