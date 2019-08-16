@@ -1,4 +1,5 @@
 ﻿using DollarComputers.Views;
+using DollarComputers.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,8 @@ namespace DollarComputers
         public static ProductInfoForm productinfoForm;
         public static OrderForm orderform;
         public static AboutBox aboutform;
+
+        public static Product product;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -31,6 +34,8 @@ namespace DollarComputers
             orderform = new OrderForm();
             productinfoForm = new ProductInfoForm();
             aboutform = new AboutBox();
+
+            product = new Product();
 
            
 
